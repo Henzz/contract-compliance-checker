@@ -17,10 +17,35 @@ that comparison.
 4. Flag: missing clauses, altered wording, unfilled placeholders
 5. Output a clause-by-clause compliance report
 
+## Setup
+
+Clone the repo, then set up a virtual environment and install dependencies:
+
+\`\`\`bash
+# Create a virtual environment
+python3 -m venv venv
+
+# Activate it
+source venv/bin/activate        # Mac/Linux
+venv\Scripts\activate           # Windows
+
+# Install dependencies
+pip install -r requirements.txt
+\`\`\`
+
 ## Usage
 
 \`\`\`bash
 python main.py template.docx contract.docx
+\`\`\`
+
+Pass the path to your master template and the signed contract you want
+to check. The tool will compare the two and report differences.
+
+To deactivate the virtual environment when you're done:
+
+\`\`\`bash
+deactivate
 \`\`\`
 
 ## Tech
